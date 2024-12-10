@@ -4,5 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def homepage(request):
-
-    return HttpResponse(request.method)
+    return render(request, "index.html")
+def anotherpage(request):
+    return HttpResponse("lmao")
