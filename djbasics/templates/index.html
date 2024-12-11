@@ -1,9 +1,13 @@
-{% load static %}
-<link href="{% static 'dist/styles.css' %}" rel="stylesheet">
+{% load static %} {% include 'menu.html'%}
+<link href="{% static 'dist/styles.css' %}" rel="stylesheet" />
 <!DOCTYPE html>
 <html lang="en">
-<body>
-    <h1 class="bg-black text-lime-500">Hello TAILWIND</h1>
-    <p>rendering html using views</p>
-</body>
+  <body>
+    <h1 class="bg-black text-lime-400 font-bold text-3xl mt-2">
+      Hello TAILWIND
+    </h1>
+    <p class="bg-slate-700 text-white h-[100vh] w-screen text-center pt-10">
+      rendering html using views
+    </p>
+  </body>
 </html>

@@ -1,0 +1,31 @@
+{% load static %}
+
+<link href="{% static 'dist/styles.css' %}" rel="stylesheet" />
+<body class="bg-black text-lime-500 flex flex-col">
+  <form action="/resultprocess" method="post">
+    {% csrf_token %}
+    <div class="flex flex-col">
+      <div class="pt-10">
+        <label for="name" >Name</label>
+        <input
+          class="bg-slate-800 border-2 border-red-300 ml-4"
+          type="text"
+          name="name"
+        />
+      </div>
+      <div class="py-10">
+        <label for="">Maths</label>
+        <input type="number" name="maths" class="bg-slate-800 border-2 border-red-300 ml-4" />
+      </div>
+      <div class="py-10">
+        <label for="">Sci</label>
+        <input type="number" name="sci" class="bg-slate-800 border-2 border-red-300 ml-4"/>
+      </div>
+      <div class="py-10">
+        <label for="">Eng</label>
+        <input type="number" name="eng" class="bg-slate-800 border-2 border-red-300 ml-4"/>
+      </div>
+      <button type="submit" class="text-center border-2 border-lime-400 w-[80px] h-[35px] font-bold">Submit</button>
+    </div>
+  </form>
+</body>

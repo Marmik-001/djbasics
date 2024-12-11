@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <form action="/formprocess" method="post">
+            {% csrf_token %}
+            <label for="name">Enter name</label>
+            <input type="text" name="name" placeholder="enter name">
+            <label for="email">Enter email</label>
+            <input type="text" name="email" placeholder="enter email">
+            <button type="submit">Submit</button>
+            
+        </form>
+    </body>
+</html>
