@@ -9,5 +9,9 @@ urlpatterns = [
     path('form' , views.formpage),
     path('formprocess' , views.formprocess),
     path('marks' , views.marksform),
-    path('resultprocess' , views.resultprocess)
+    path('resultprocess' , views.resultprocess),
+    path('add-student' , views.addStudent),
+    path('data-display' , views.displayStudetData),
+    path('add-faculty' , views.addFaculty),
+    path('faculty-data-display' , views.displayFacultyData)
 ]

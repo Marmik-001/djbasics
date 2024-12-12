@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 class Student(models.Model):
     studentName = models.CharField("Name" , max_length=50 , blank=False)
@@ -13,3 +13,13 @@ class Student(models.Model):
 
     def __str__(self):
         return self.studentName
+
+class Faculty(models.Model):
+    facultyName = models.CharField("Name" , max_length=50 , blank=False)
+    facultyMobile = models.PositiveIntegerField("Number",max_length=10 , blank=False)
+    facultyDepartment = models.CharField("Department" , max_length=30 )
+    facultyRegistrationDate = models.DateTimeField("RegistrationDate" ,default=timezone.now)
+
+
+    def __str__(self):
+        return self.facultyName
